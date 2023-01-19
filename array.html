@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+    Enter a string:<input type="text" id="val">
+</form>
+<button type="submit" onClick="count()">Display</button>
+<p>Character array :=</p>
+<p id="demo"></p>
+
+<script>
+function count()
+{
+let text = document.getElementById("val").value;
+const myArray = text.split("");
+for(var i=0;i<myArray.length;i++)
+{
+    var str = document.getElementById("demo").textContent;
+    document.getElementById("demo").innerHTML =  str + myArray[i] + ',';
+}
+}
+</script>
+
+</body>
+</html>

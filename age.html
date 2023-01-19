@@ -1,0 +1,28 @@
+<html>
+    <body>
+        Enter Date of Birth:<input type="date" id="dob">
+        <button onclick="find_age()">Find age</button>
+        <p id="age"></p>
+    </body>
+    <script>  
+        function find_age()
+        {
+            var dob = new Date(document.getElementById("dob").value); 
+            document.getElementById("age").innerHTML=dob; 
+            //calculate month difference from current date in time  
+            var month_diff = Date.now() - dob.getTime();  
+            
+            //convert the calculated difference in date format  
+            var age_dt = new Date(month_diff);   
+            
+            //extract year from date      
+            var year = age_dt.getUTCFullYear();  
+            
+            //now calculate the age of the user  
+            var age = Math.abs(year - 1970);  
+            
+            //display the calculated age  
+            document.getElementById("age").innerHTML="Age : " + age + " years";  
+        }
+    </script>  
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<body>
+    <p>Is 'Hello' a blank string?</p>
+    <button onclick="check('Hello')"> Check </button>
+    <p id="a1"></p>
+    <p>Is '' an array?</p>
+    <button onclick="check('')"> Check </button>
+    <script>
+    function check(arr)
+    {
+        if(arr.length===0)
+            document.getElementById("a1").innerHTML="It is a blank string";
+        else
+            document.getElementById("a1").innerHTML="It is not a blank string";
+    }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+    Enter a string:<input type="text" id="val">
+</form>
+<button type="submit" onClick="count()">Count</button>
+
+<p id="demo"></p>
+
+<script>
+function count()
+{
+let text = document.getElementById("val").value;
+const myArray = text.split(" ");
+document.getElementById("demo").innerHTML = 'Number of words : '+myArray.length; 
+}
+</script>
+
+</body>
+</html>
